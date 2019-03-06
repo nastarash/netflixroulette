@@ -1,0 +1,22 @@
+{
+  "name": "netflixroulette",
+  "version": "1.0.0",
+  "description": "Single page application, which will allow users to search the Movies DB database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nastarash/netflixroulette.git"
+  },
+  "author": "Anastasiya Rashchynskaya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nastarash/netflixroulette/issues"
+  },
+  "homepage": "https://github.com/nastarash/netflixroulette#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
