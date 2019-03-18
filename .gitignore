@@ -61,4 +61,4 @@ typings/
 .next
 
 # Dist directory
-.dist
+dist/
