@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchField from '../searchField/SearchField';
 import SearchButton from '../searchButton/SearchButton';
+import ResultForm from '../resultForm/ResultForm';
 
 function SearchFilter() {
   return (
@@ -15,7 +16,7 @@ function SearchFilter() {
           name="toggle"
           value="false"
           type="radio"
-          checked
+          //checked
         />
         <label htmlFor="toggle-on" className="btn">
           Title
@@ -31,6 +32,7 @@ function SearchFilter() {
           Genre
         </label>
       </div>
+      <ResultForm props="none" />
     </form>
   );
 }
