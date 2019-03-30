@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { Fragment } from "react";
+import SearchField from "../searchField/SearchField";
+import SearchFilter from "../searchFilter/SearchFilter";
+import ErrorBoudaries from "../../ErrorBoundaries";
 
 class SearchButton extends React.Component {
   constructor(props) {
@@ -7,14 +10,20 @@ class SearchButton extends React.Component {
   }
 
   onButtonClick() {
-    document.getElementById('resultForm').style.display = 'block';
+    console.log("Button works");
   }
 
   render() {
     return (
-      <button type="submit" onClick={this.onButtonClick}>
-        Seacrh
-      </button>
+      <Fragment>
+        <ErrorBoudaries>
+          <SearchField />
+          <SearchFilter />
+          <button type="submit" onClick={this.onButtonClick}>
+            Seacrh
+          </button>
+        </ErrorBoudaries>
+      </Fragment>
     );
   }
 }

@@ -1,13 +1,8 @@
 import React from 'react';
-import SearchField from '../searchField/SearchField';
-import SearchButton from '../searchButton/SearchButton';
-import ResultForm from '../resultForm/ResultForm';
 
 function SearchFilter() {
   return (
     <form>
-      <SearchField />
-      <SearchButton />
       <p>SEARCH BY</p>
       <div>
         <input
@@ -32,7 +27,6 @@ function SearchFilter() {
           Genre
         </label>
       </div>
-      <ResultForm props="none" />
     </form>
   );
 }

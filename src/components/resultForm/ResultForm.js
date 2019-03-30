@@ -3,15 +3,11 @@ import React from 'react';
 class ResultForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { display: this.props };
+    this.state = {};
   }
 
   render() {
-    return (
-      <div id="resultForm" style={{ display: this.state.display }}>
-        No movie found
-      </div>
-    );
+    return <div id="resultForm">No movie found</div>;
   }
 }
 
