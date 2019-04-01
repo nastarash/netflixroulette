@@ -1,7 +1,7 @@
-import React, { Fragment } from "react";
-import SearchField from "../searchField/SearchField";
-import SearchFilter from "../searchFilter/SearchFilter";
-import ErrorBoudaries from "../../ErrorBoundaries";
+import React, { Fragment } from 'react';
+import SearchField from '../searchField/SearchField';
+import SearchFilter from '../searchFilter/SearchFilter';
+import ErrorBoudaries from '../../ErrorBoundaries';
 
 class SearchButton extends React.Component {
   constructor(props) {
@@ -10,7 +10,7 @@ class SearchButton extends React.Component {
   }
 
   onButtonClick() {
-    console.log("Button works");
+    console.log('Button works');
   }
 
   render() {
