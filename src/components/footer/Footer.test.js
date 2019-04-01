@@ -1,8 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import App from './App';
+import Footer from './Footer';
 
 it('render correctly', () => {
-  const AppComponent = renderer.create(<App />).toJSON();
+  const AppComponent = renderer.create(<Footer />).toJSON();
   expect(AppComponent).toMatchSnapshot();
 });

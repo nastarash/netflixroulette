@@ -1,8 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import App from './App';
+import OrderingFilter from './OrderingFilter';
 
 it('render correctly', () => {
-  const AppComponent = renderer.create(<App />).toJSON();
+  const AppComponent = renderer.create(<OrderingFilter />).toJSON();
   expect(AppComponent).toMatchSnapshot();
 });

@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render correctly 1`] = `
+<form>
+  <p>
+    SEARCH BY
+  </p>
+  <div>
+    <input
+      className="toggle toggle-left"
+      id="toggle-on"
+      name="toggle"
+      type="radio"
+      value="false"
+    />
+    <label
+      className="btn"
+      htmlFor="toggle-on"
+    >
+      Title
+    </label>
+    <input
+      className="toggle toggle-right"
+      id="toggle-off"
+      name="toggle"
+      type="radio"
+      value="true"
+    />
+    <label
+      className="btn"
+      htmlFor="toggle-off"
+    >
+      Genre
+    </label>
+  </div>
+</form>
+`;

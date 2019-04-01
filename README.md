@@ -22,3 +22,9 @@ Link to HW: https://stackblitz.com/edit/react-qpztgg?file=index.js
 - Use Error Boundaries
 - Use smart/dumb components approach
 - 100% decomposition ( evaluated by mentor )
+
+**Task 4.** Testing
+- Coverage > 60%
+- Use snapshot testing
+- Functional testing with enzyme and jest
+- Write at least one e2e test

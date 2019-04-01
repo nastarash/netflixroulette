@@ -8,8 +8,8 @@ class ErrorBoundary extends React.Component {
 
   componentDidCatch(error, errorInfo) {
     this.setState({
-      error: error,
-      errorInfo: errorInfo
+      error,
+      errorInfo,
     });
   }
 
@@ -18,7 +18,7 @@ class ErrorBoundary extends React.Component {
       return (
         <div>
           <h2>Something went wrong.</h2>
-          <details style={{ whiteSpace: 'pre-wrap'}}>
+          <details style={{ whiteSpace: 'pre-wrap' }}>
             {this.state.error && this.state.error.toString()}
             <br />
             {this.state.errorInfo.componentStack}
@@ -26,6 +26,7 @@ class ErrorBoundary extends React.Component {
         </div>
       );
     }
+    // eslint-disable-next-line react/prop-types
     return this.props.children;
   }
 }

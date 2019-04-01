@@ -2,11 +2,6 @@
 
 exports[`render correctly 1`] = `
 Array [
-  <header>
-    <h1>
-      netflixroullete
-    </h1>
-  </header>,
   <div>
     <p>
       FIND YOUR MOVIE
@@ -54,10 +49,5 @@ Array [
   >
     Seacrh
   </button>,
-  <footer>
-    <h1>
-      netflixroullete
-    </h1>
-  </footer>,
 ]
 `;
