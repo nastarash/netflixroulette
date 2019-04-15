@@ -1,0 +1,35 @@
+@import '~CommonStyles';
+
+.button {
+  padding: 5px 10px;
+  margin: 10px;
+  
+  text-transform: uppercase;
+  color: $light-text-color;
+  
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &-active {
+    background-color: $active-color;
+
+    &.button-light {
+      background: none;
+      color: $active-color;
+      text-transform: lowercase;
+    }
+  }
+
+  &-inactive {
+    background-color: $inactive-color;
+
+    &.button-light {
+      background: none;
+      color: $inactive-color;
+      text-transform: lowercase;
+    }
+  }
+}

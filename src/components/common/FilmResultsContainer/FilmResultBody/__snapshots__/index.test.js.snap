@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FilmResultBody /> should be rendered correctly 1`] = `
+<div
+  className="film-result-body"
+>
+  <FilmResultImage />
+  <div
+    className="film-result-body__header"
+  >
+    <span
+      className="film-result-body__title"
+    />
+    <span
+      className="film-result-body__date"
+    >
+      <FilmResultReleaseDate />
+    </span>
+  </div>
+  <span
+    className="film-result-body__genre"
+  />
+</div>
+`;
