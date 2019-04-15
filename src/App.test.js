@@ -1,8 +1,0 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import App from './App';
-
-it('render correctly', () => {
-  const AppComponent = renderer.create(<App />).toJSON();
-  expect(AppComponent).toMatchSnapshot();
-});

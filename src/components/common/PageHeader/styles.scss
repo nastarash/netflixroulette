@@ -1,0 +1,24 @@
+@import '~CommonStyles';
+
+.page-header {
+  position: relative;
+
+  &__background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+
+    background-image: url('../../../../public/Netflix-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    filter: blur(3.5px) brightness(50%);
+  }
+
+  &__container {
+    padding: 30px 50px 0 100px;
+    position: relative;
+    z-index: 10;
+  }
+}

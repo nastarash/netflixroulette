@@ -28,3 +28,5 @@ Link to HW: https://stackblitz.com/edit/react-qpztgg?file=index.js
 - Use snapshot testing
 - Functional testing with enzyme and jest
 - Write at least one e2e test
+
+**Task 5.** Flux + Redux
