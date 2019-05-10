@@ -1,4 +1,4 @@
-import { ACTION, ENDPOINT } from 'Common/Constants';
+import { ACTION, ENDPOINT } from '@common/Constants';
 import { filmsHasErrored, filmsIsLoading, filmsFetchDataSuccess, filmsFetchData } from './films';
 
 describe('films actions', () => {
@@ -33,33 +33,6 @@ describe('films actions', () => {
     expect(action.total).toEqual(params.total);
     expect(action.offset).toEqual(params.offset);
     expect(action.limit).toEqual(params.limit);
-  });
-
-
-  it('filmsFetchData creates correct parameters', () => {
-    const params = {
-      sortBy: 'title',
-      sortOrder: 'asc',
-      search: 'some film',
-      searchBy: 'genre',
-    };
-
-    const fetchMock = () => Promise.resolve({
-      ok: true,
-      json: () => {},
-    });
-
-    const dispatchMock = jest.fn();
-
-    global.fetch = jest.fn();
-    jest.spyOn(global, 'fetch').mockImplementation(fetchMock);
-
-    filmsFetchData(params)(dispatchMock);
-
-    expect(global.fetch).toHaveBeenCalledTimes(1);
-    expect(global.fetch).toHaveBeenCalledWith(
-        ENDPOINT.GET_ALL_MOVIES + '?search=some%20film&searchBy=genre&sortBy=title&sortOrder=asc&'
-    );
   });
 
   it('filmsFetchData dispatches all necessary actions when result is ok', () => {

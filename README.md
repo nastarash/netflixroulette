@@ -30,3 +30,7 @@ Link to HW: https://stackblitz.com/edit/react-qpztgg?file=index.js
 - Write at least one e2e test
 
 **Task 5.** Flux + Redux
+
+**Task 6.** Routing
+
+**Task 7.** Server side rendering

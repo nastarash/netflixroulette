@@ -1,8 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
+
 import { Switcher } from 'CommonComponents/Switcher';
-import { setSortingBy } from 'Actions/filter';
-import { STRINGS, FILM_FIELD_NAMES } from 'Common/constants';
+import { STRINGS, FILM_FIELD_NAMES } from '@common/constants';
+import { setSortingBy } from '@actions/filter';
+
 import './styles.scss';
 
 export class SearchResults extends Component {
@@ -11,8 +14,12 @@ export class SearchResults extends Component {
   }
 
   render() {
-    return (
-      <div className='search-results'>
+    const { pathname } = this.props.location;
+    const { genre } = this.props;
+
+    let content = null;
+    if (pathname === '/' || pathname.startsWith('/search')) {
+      content = <Fragment>
         <div className='search-results__found'>
           {this.props.totalFilms} movies found
         </div>
@@ -24,6 +31,16 @@ export class SearchResults extends Component {
             isLight={true}
             onChange={this.setSortingByHandler.bind(this)}/>
         </div>
+      </Fragment>;
+    } else if (pathname.startsWith('/film/')) {
+      content = <div className='search-results__found'>
+        Films by { genre } genre
+      </div>;
+    }
+
+    return (
+      <div className='search-results'>
+        {content}
       </div>
     );
   }
@@ -44,6 +61,7 @@ const mapStateToProps = (state) => {
   return {
     totalFilms: state.films.total,
     sortBy,
+    genre: (state.film && state.film.genres) ? state.film.genres[0] : '',
   };
 };
 
@@ -63,4 +81,5 @@ const mapDispatchToProps = (dispatch) => ({
   },
 });
 
-export const SearchResultsContainer = connect(mapStateToProps, mapDispatchToProps)(SearchResults);
+export const SearchResultsConnected = connect(mapStateToProps, mapDispatchToProps)(SearchResults);
+export const SearchResultsContainer = withRouter(SearchResultsConnected);

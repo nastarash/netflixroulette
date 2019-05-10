@@ -1,4 +1,4 @@
-import { ACTION } from 'Common/constants';
+import { ACTION } from '@common/constants';
 
 export const filmsHasErrored = (state = false, { type, hasErrored }) => {
   switch (type) {
@@ -34,6 +34,15 @@ export const films = (state = defaultFilmsState, { type, films = [], total = 0, 
         offset,
         limit,
       };
+    default:
+      return state;
+  }
+};
+
+export const film = (state = {}, { type, film }) => {
+  switch (type) {
+    case ACTION.FILM_FETCHED_SUCCESSFULLY:
+      return film;
     default:
       return state;
   }

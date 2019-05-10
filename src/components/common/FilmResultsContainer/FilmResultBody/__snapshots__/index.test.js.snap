@@ -3,6 +3,7 @@
 exports[`<FilmResultBody /> should be rendered correctly 1`] = `
 <div
   className="film-result-body"
+  onClick={[Function]}
 >
   <FilmResultImage />
   <div
@@ -14,7 +15,9 @@ exports[`<FilmResultBody /> should be rendered correctly 1`] = `
     <span
       className="film-result-body__date"
     >
-      <FilmResultReleaseDate />
+      <FilmResultReleaseDate
+        date=""
+      />
     </span>
   </div>
   <span

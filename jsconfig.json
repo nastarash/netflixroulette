@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "CommonComponents/*": ["./src/components/common/*"],
+      "Common/*": ["./src/common/*"],
+      "Actions/*": ["src/store/actions/*"]
+    }
+  },
+  "typeAcquisition": {
+    "include": [
+      "jest"
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { DummyButton } from '../DummyButton';
+import { DummyButton } from 'CommonComponents/DummyButton';
 import './styles.scss';
 
 export class Switcher extends Component {
