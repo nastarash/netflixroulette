@@ -20,17 +20,33 @@ export class App extends Component {
       <AppErrorBoundary>
         <Provider store={store}>
           <Router location={location} context={context}>
-            <div className='page-container'>
-              <Route render={(props) => (
-                <PageHeader {...props}>
-                  <Route exact path='/film/:id?' component={SingleFilmContainer} />
-                </PageHeader>
-              )} />
-              <div className='page-container__content'>
+            <div className="page-container">
+              <Route
+                render={props => (
+                  <PageHeader {...props}>
+                    <Route
+                      exact
+                      path="/film/:id?"
+                      component={SingleFilmContainer}
+                    />
+                  </PageHeader>
+                )}
+              />
+              <div className="page-container__content">
                 <Switch>
-                  <Route exact path={['/search/:searchString', '/search/', '/search', '/', '/film/:id?']}
-                    component={FilmResultsContainer} />
-                  <Route path='/404' component={NotFound} />
+                  <Route
+                    exact
+                    path={[
+                      '/search/:searchString',
+                      '/search/',
+                      '/search',
+                      '/',
+                      '/film/:id?',
+                      ,
+                    ]}
+                    component={FilmResultsContainer}
+                  />
+                  <Route path="/404" component={NotFound} />
                   <Route component={NotFound} />
                 </Switch>
               </div>

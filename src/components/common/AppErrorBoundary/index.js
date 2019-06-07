@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export class AppErrorBoundary extends Component {
   constructor(props) {
@@ -6,13 +7,15 @@ export class AppErrorBoundary extends Component {
     this.state = { hasError: false };
   }
 
+  propTypes = {
+    children: PropTypes.any,
+  };
+
   static getDerivedStateFromError(error) {
-    // update state if need for showing error
     return { hasError: true };
   }
 
-  componentDidCatch(error, info) {
-  }
+  componentDidCatch(error, info) {}
 
   render() {
     if (this.state.hasError) {

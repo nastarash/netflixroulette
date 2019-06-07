@@ -1,5 +1,3 @@
-
-
 export class Film {
   // constructor(
   //   title = '',

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { FilmResultBodyContainer } from './FilmResultBody';
 import { filmsFetchData, fetchFilmById } from '@actions/films';
-
+import PropTypes from 'prop-types';
+import { FilmResultBodyContainer } from './FilmResultBody';
 import './styles.scss';
 
 export class FilmResults extends Component {
@@ -13,9 +13,9 @@ export class FilmResults extends Component {
     }
   }
 
-  handleFilmClick = (id) => {
+  handleFilmClick = id => {
     this.props.fetchFilm(id);
-  }
+  };
 
   render() {
     if (this.props.hasErrored) {
@@ -27,24 +27,31 @@ export class FilmResults extends Component {
     }
 
     return (
-      <div className='film-results-container'>
-        {this.props.films.records.map((film) => (
-          <FilmResultBodyContainer key={film.id} filmResult={film} onClick={this.handleFilmClick} />
+      <div className="film-results-container">
+        {this.props.films.records.map(film => (
+          <FilmResultBodyContainer
+            key={film.id}
+            filmResult={film}
+            onClick={this.handleFilmClick}
+          />
         ))}
       </div>
     );
   }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   films: state.films,
   hasErrored: state.filmsHasErrored,
   isLoading: state.filmsIsLoading,
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = dispatch => ({
   fetchData: () => dispatch(filmsFetchData()),
-  fetchFilm: (id) => dispatch(fetchFilmById(id)),
+  fetchFilm: id => dispatch(fetchFilmById(id)),
 });
 
-export const FilmResultsContainer = connect(mapStateToProps, mapDispatchToProps)(FilmResults);
+export const FilmResultsContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(FilmResults);
